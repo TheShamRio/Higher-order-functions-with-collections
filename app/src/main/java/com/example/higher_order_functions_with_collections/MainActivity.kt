@@ -51,8 +51,19 @@ val cookies = listOf(
     )
 )
 
+//fun main() {
+//    cookies.forEach {
+//        println("Menu item: ${it.name}")
+//    }
+//}
+
+val fullMenu = cookies.map {
+    "${it.name} - $${it.price}"
+}
+
 fun main() {
-    cookies.forEach {
-        println("Menu item: ${it.name}")
+    println("Full menu:")
+    fullMenu.forEach {
+        println(it)
     }
 }
